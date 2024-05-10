@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- vinculación con estilos y favicon -->
+    <link rel="shortcut icon" href="./static/img/favicon.svg"  >
+    <title>HojaVerde</title>
+    <!-- ZONA ESTILOS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <!-- Logo -->
+      <div id="logo">
+        <a href="/">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#48752C"><path d="M280-80v-160H0l154-240H80l280-400 120 172 120-172 280 400h-74l154 240H680v160H520v-160h-80v160H280Zm389-240h145L659-560h67L600-740l-71 101 111 159h-74l103 160Zm-523 0h428L419-560h67L360-740 234-560h67L146-320Zm0 0h155-67 252-67 155-428Zm523 0H566h74-111 197-67 155-145Zm-149 80h160-160Zm201 0Z"/></svg>
+          <span class="logo-text">HojaVerde</span>
+        </a>
+      </div>
+
+      <!-- hipervínculos del menú -->
+      <ul class="nav-links">
+        <li><a href="#Sobre_Nosotros">Sobre Nosotros</a></li>
+        <li><a href="#Tu_Jardin"> Tu Jardin</a></li>
+        <li><a href="#Wiki">Wiki</a></li>
+        <li><a href="#Contacto">Contacto</a></li>
+      </ul>
+    </header>
+    
+    <main>
+      <h2>TITULO PRINCIPAL</h2>
+      <section id="Sobre_Nosotros">
+        <h2 id="titulo1">Sobre nosotros</h2>
+        <div id="tema1">
+          <!-- atajo p.contenido1#conenido$*2{contenido $} -->
+          <p class="contenido1">Este contenido será modificado por JS</p>
+          <p class="contenido1">Este contenido no está modificado por JS</p>
+        </div>
+      </section>
+
+      <section id="Tu_Jardin">
+        <h2 id="titulo2">Consejos útiles | Tu Jardin</h2>
+        <div id="tema2">
+          <!-- atajo p.contenido2*3{contenido a modificar}) -->
+          <p class="contenido2">contenido a modificar</p>
+          <p class="contenido2">contenido a modificar</p>
+          <p class="contenido2">contenido a modificar</p>
+        </div>
+        <button class="boton boton-primario" onclick="cambiarTexto()">
+          Botón primario
+        </button>
+      </section>
+      
+      <section id="Wiki">
+        <h2 id="titulo3">Catálogo | Wiki</h2>
+        <div id="tema3"></div>
+      </section>
+
+      <section id="Contacto">
+        <h2 id="titulo4">Contacto</h2>
+        <form action="#" id="form" method="GET" novalidate>
+          <div class="error" id="error-lastname"></div>
+          <div class="form-control">
+            <label>Email</label>
+            <input type="email" required name="email" id="email">
+          </div>
+          <div class="error" id="error-email"></div>
+          <div class="form-control">
+            <label id="label-birthdate">Fecha de Nacimiento</label>
+            <input type="date" required name="birthdate" id="birthdate">
+          </div>
+          <div class="form-control">
+            <select name="country" id="country" class="form-select">
+              <option value="">Pais de origen</option>
+              <option value="AR">Argentina</option>
+              <option value="BO">Bolivia</option>
+              <option value="BR">Brasil</option>
+              <option value="CH">Chile</option>
+              <option value="CO">Colombia</option>
+              <option value="EC">Ecuador</option>
+              <option value="PY">Paraguay</option>
+              <option value="PE">Perú</option>
+              <option value="UY">Uruguay</option>
+              <option value="VE">Venezuela</option>
+            </select>
+          </div>
+          <div class="form-motivo">
+            <span>Te gustaría colaborar para formar un mundo más verde?</span>
+            <div class="motivo">
+              <input type="checkbox" id="motivo">
+              <label for="motivo">Deseo contribuir económicamente!</label>
+            </div>
+            <div class="motivo">
+              <input type="checkbox" id="motivo">
+              <label for="motivo">Me gustaría formar parte del equipo!</label>
+            </div>
+            <div class="motivo">
+              <input type="checkbox" id="motivo">
+              <label for="motivo">Otro</label>
+            </div>
+          </div>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+
+
+    </main>
+
+    <footer id="footer">
+      <a href="">Términos y condiciones</a>
+      <a href="">Preguntas Frecuentes</a>
+      <a href="">Ayuda</a>
+    </footer>
+
+    <!-- zona de scripts -->
+    <script src="./App.js"></script>
+  </body>
+</html>
