@@ -86,6 +86,106 @@ nav {
 
 section {
   margin: 0rem 0rem 2.5rem 0rem;
+  width: 100%;
+  margin: 0px;
+}
+
+#banner{
+  background-image: url(../img/banner.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 30vh;
+  box-shadow: inset 0 0 0 2000px rgba(84, 84, 84, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+h1 {
+  color: var(--third-color);
+  font-size: 2.5em;
+}
+
+#titulo1 {
+  font-size: 2.2em;
+  font-style: oblique;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.texto1 {
+  font-size: 1.2em;
+  font-style: oblique;
+  text-align: center;
+  font-weight: bold;
+  margin: 10px 40px 20px;
+  padding: 1rem 6rem;
+}
+
+.contenido1 {
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider {
+  width: 80%; 
+  max-width: 400px; 
+  height: 300px;
+  overflow: hidden;
+  margin: 0 auto; 
+}
+
+.slider ul {
+  display: flex;
+  padding: 0px;
+  width: 400%;
+  animation: deslizado 15s infinite alternate linear;
+}
+.slider li{
+  width: 100%;
+  list-style: none;
+}
+
+.slider img{
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes deslizado{
+  0%{margin-left: 0;}
+  20%{margin-left: 0;}
+
+  25%{margin-left: -100%;}
+  45%{margin-left: -100%;}
+
+  50%{margin-left: -200%;}
+  70%{margin-left: -200%;}
+
+  75%{margin-left: -300%;}
+  100%{margin-left: -300%;}
+}
+
+.contenido1-1 {
+  margin: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenido1-1 p{
+  text-align: center;
+  padding: 2rem 8rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .contenido1{
+    flex-direction: column;
+  }
+  .contenido1-1{
+    width: calc(100%/2);
+  }
 }
 
 /* ########################## Footer ########################## */
