@@ -123,11 +123,11 @@ h1 {
   font-size: 3em;
 }
 
-#titulo1 {
+#titulo1, #titulo2, #titulo3, #titulo4 {
   font-size: 2.5em;
   font-style: oblique;
   text-align: center;
-  margin-top: 10px;
+  margin: 1rem 0rem;
 }
 
 .texto1 {
@@ -139,7 +139,7 @@ h1 {
   padding: 1rem 6rem;
 }
 
-.contenido1 {
+.contenido1, .contenido2, .contenido3 {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -214,12 +214,21 @@ footer {
   background-color: var(--bg-color);
   height: 60px;
   margin: 0 auto;
+  padding: 4rem;
+}
+
+.footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 footer p{
-  /* display: flex; */
   margin-left: var(--spacer-4);
+  padding: 1rem;
 }
+
 
 /* CAMBIOS HECHOS POR CONSTANZA */
 
@@ -320,12 +329,15 @@ display: flex;
 
 .contenido3{
  margin: 2rem 4rem;
+ padding: 0rem 2rem;
 }
 
 .card-service-container{
-  width: 100%;
+  width: fit-content;
   display: flex;
-  max-width: 1100px;
+  justify-content: space-around;
+  margin: 2rem;
+  padding-bottom: 3rem;
 }
 
 .card-service{
@@ -348,6 +360,11 @@ display: flex;
   height: 200px;
 }
 
+.service-img img{
+  width: auto;
+  height: 150px;
+}
+
 .service-text{
   padding: 15px;
   text-align: center;
@@ -361,3 +378,66 @@ span{
 }
 
   
+
+/* Sección de Contacto */
+
+#Contacto{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+}
+
+#Contacto button{
+  position: relative;
+  left: 14rem;
+  padding: 0.7rem;
+  background-color: #b5c18e;
+  font-size: 1rem;
+  border: solid 2px #707c49;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  max-width: 6rem;
+}
+
+#Contacto button:hover{
+  cursor: pointer;
+  scale: 120%;
+}
+
+#form{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form-control{
+  margin: 1rem;
+}
+
+.form-motivo, .motivo{
+  margin: 1rem;
+}
+
+.form-control label{
+  margin-right: 1rem;
+}
+
+.form-control input{
+  padding: 0.3rem;
+  border: solid 0.15rem #76453b;
+  border-radius: 7px;
+}
+
+#email{
+  width: 15rem;
+}
+
+#country{
+  padding: 0.3rem;
+  border: solid 0.15rem #76453b;
+  border-radius: 7px;
+}
