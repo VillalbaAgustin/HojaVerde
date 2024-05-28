@@ -139,7 +139,12 @@ h1 {
   padding: 1rem 6rem;
 }
 
-.contenido1, .contenido2, .contenido3 {
+.slider{
+  position: relative;
+  left: 24rem;
+}
+
+.contenido2, .contenido3 {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
