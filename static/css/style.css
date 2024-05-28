@@ -96,7 +96,12 @@ nav {
   color: var(--secondary-color);
   transition: 0.25s linear;
 }
-
+#NosotrosRef,
+#JardinRef,
+#ServiciosRef,
+#ContactoRef{
+  height: 43px;
+}
 /* ########################## Main ########################## */
 
 section {
