@@ -41,7 +41,7 @@ main {
 a {
   list-style: none;
   text-decoration: none;
-  margin-left: var(--spacer-4);
+  margin-left: var(--spacer-2);
   color: var(--font-text-color);
 }
 
@@ -70,6 +70,18 @@ nav {
   display: flex;
   width: 95%;
   justify-content: space-between;
+}
+
+#logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#logo a svg{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #logo a, ul {
@@ -231,6 +243,12 @@ h1 {
   .contenido2, .contenido3{
     text-align: center;
   }
+
+  .logo-text{
+    display: none;
+  }
+
+
 }
 
 @media only screen and (min-width: 601px) and (max-width: 992px){
@@ -279,16 +297,13 @@ footer p{
   padding: 1rem;
 }
 
-
-/* CAMBIOS HECHOS POR CONSTANZA */
-
+  /*********** Sección **************/
 .seccion_clara{
   background-color: var(--third-color);
 }
 
 .seccion_clara, .seccion_oscura{
   width: 100%;
-  /* padding: 0rem 2rem; */
 }
 
   /* Sección Tu Jardín */
