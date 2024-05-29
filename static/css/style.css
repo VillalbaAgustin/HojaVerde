@@ -96,6 +96,7 @@ nav {
   color: var(--secondary-color);
   transition: 0.25s linear;
 }
+
 #NosotrosRef,
 #JardinRef,
 #ServiciosRef,
@@ -172,7 +173,7 @@ h1 {
   width: 400%;
   animation: deslizado 15s infinite alternate linear;
 }
-.slider span{
+.slider li{
   width: 100%;
   list-style: none;
 }
@@ -353,13 +354,11 @@ display: flex;
 }
 
 .card-service-container{
-  width: fit-content;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   margin: 2rem;
   padding-bottom: 3rem;
   flex-wrap: wrap;
-  flex-direction: row;
 }
 
 .card-service{
