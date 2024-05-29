@@ -41,7 +41,7 @@ main {
 a {
   list-style: none;
   text-decoration: none;
-  margin-left: var(--spacer-4);
+  margin-left: var(--spacer-2);
   color: var(--font-text-color);
 }
 
@@ -70,6 +70,18 @@ nav {
   display: flex;
   width: 95%;
   justify-content: space-between;
+}
+
+#logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#logo a svg{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #logo a, ul {
@@ -141,30 +153,24 @@ h1 {
   font-style: oblique;
   text-align: center;
   font-weight: bold;
+  line-height: 180%;
   margin: 10px 40px 20px;
   padding: 1rem 6rem;
 }
 
-
-.contenedor-slider{
+.contenedor-img{
   display: flex;
   justify-content: center;
   align-content: center;
 }
 
-.contenido2, .contenido3 {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-}
-
 .slider {
   width: 100%; 
-  max-width: 500px; 
-  height: 300px;
+  max-width: 700px; 
+  height: 400px;
   overflow: hidden;
-  margin: 0px 40px 10px; 
+  margin: 10px;
+  justify-content: center;
 }
 
 .slider ul {
@@ -204,25 +210,67 @@ h1 {
   flex-direction: column;
 }
 
-.contenido1-1 {
+.texto2 {
   margin: 0px;
   justify-content: center;
   align-items: center;
 }
 
-.contenido1-1 p{
+.texto2 p{
   font-size: 1em;
   text-align: center;
-  padding: 2rem 8rem;
+  line-height: 180%;
+  padding: 2rem 4rem;
 }
 
-@media only screen and (max-width: 600px) {
-  .contenido1{
-    flex-direction: column;
+@media only screen and (max-width: 600px){
+  h1{
+    text-align: center;
+    font-size: 2.5em;
   }
-  .contenido1-1{
-    width: calc(100%/2);
+
+  .slider{
+    width: 320px;
+    height: 250px;
   }
+
+  .texto1, .texto2 p{
+    line-height: 130%;
+    padding: 1rem 2rem;
+    margin: 0;
+  }
+
+  .contenido2, .contenido3{
+    text-align: center;
+  }
+
+  .logo-text{
+    display: none;
+  }
+
+
+}
+
+@media only screen and (min-width: 601px) and (max-width: 992px){
+
+  .slider{
+    width: 500px;
+    height: 400px;
+    padding-bottom: 0;
+  }
+
+  .texto1, .texto2 p{
+    line-height: 150%;
+    margin: 0px;
+  }
+
+}
+
+.contenido2, .contenido3 {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
 /* ########################## Footer ########################## */
@@ -249,16 +297,13 @@ footer p{
   padding: 1rem;
 }
 
-
-/* CAMBIOS HECHOS POR CONSTANZA */
-
+  /*********** Sección **************/
 .seccion_clara{
   background-color: var(--third-color);
 }
 
 .seccion_clara, .seccion_oscura{
   width: 100%;
-  /* padding: 0rem 2rem; */
 }
 
   /* Sección Tu Jardín */
@@ -363,7 +408,7 @@ display: flex;
 
 .card-service{
   width: 15rem;
-  height: 28rem;
+  height: 24rem;
   margin: 7px;
   border-radius: 10px;
   overflow: hidden;
@@ -390,6 +435,7 @@ display: flex;
 .service-text{
   padding: 15px;
   text-align: center;
+  
 }
 
 span{
