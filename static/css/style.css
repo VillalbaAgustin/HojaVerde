@@ -437,10 +437,17 @@ span{
 }
 
 .form-control{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 1rem;
 }
 
-.form-motivo, .motivo{
+.form-motivo{
+  margin: 1.5rem;
+}
+
+.motivo{
   margin: 1rem;
 }
 
@@ -457,7 +464,14 @@ span{
 #email{
   width: 15rem;
 }
-
+.email, .fecha{
+  display: flex;
+}
+.verde{
+  color: #84a027;
+  margin: 0px;
+  padding: 0px;
+}
 #country{
   padding: 0.3rem;
   border: solid 0.15rem #76453b;

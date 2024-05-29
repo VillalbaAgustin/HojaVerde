@@ -241,12 +241,30 @@
       <form action="#" id="form" method="GET" novalidate>
         <div class="error" id="error-lastname"></div>
         <div class="form-control">
-          <label>Email</label>
-          <input type="email" required name="email" id="email">
+          <div class="email">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="22" height="22" viewBox="0 0 24 24" stroke-width="2" stroke="#76453b" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+              <path d="M3 7l9 6l9 -6" />
+            </svg>
+            
+            <label>Email</label>
+          </div>
+            <input type="email" required name="email" id="email">
         </div>
         <div class="error" id="error-email"></div>
         <div class="form-control">
-          <label id="label-birthdate">Fecha de Nacimiento</label>
+          <div class="fecha">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-event" width="22" height="22" viewBox="0 0 24 24" stroke-width="2" stroke="#76453b" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <path d="M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+              <path d="M16 3l0 4" />
+              <path d="M8 3l0 4" />
+              <path d="M4 11l16 0" />
+              <path d="M8 15h2v2h-2z" />
+            </svg>
+            <label id="label-birthdate">Fecha de Nacimiento</label>
+          </div>
           <input type="date" required name="birthdate" id="birthdate">
         </div>
         <div class="form-control">
@@ -265,7 +283,7 @@
           </select>
         </div>
         <div class="form-motivo">
-          <span>¿Te gustaría colaborar para formar un mundo más verde?</span>
+          <span>¿Te gustaría colaborar para formar un mundo más <span class="verde">verde</span>?</span>
           <div class="motivo">
             <input type="checkbox" id="motivo">
             <label for="motivo">¡Deseo contribuir económicamente!</label>
@@ -279,7 +297,7 @@
             <label for="motivo">Otro</label>
           </div>
         </div>
-        <button type="submit">Enviar</button>
+        <button  type="submit">Enviar</button>
       </form>
     </section>
 
