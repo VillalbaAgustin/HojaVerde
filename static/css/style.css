@@ -359,10 +359,12 @@ display: flex;
   margin: 2rem;
   padding-bottom: 3rem;
   flex-wrap: wrap;
+  flex-direction: row;
 }
 
 .card-service{
-  width: 100%;
+  width: 15rem;
+  height: 28rem;
   margin: 7px;
   border-radius: 10px;
   overflow: hidden;
@@ -377,12 +379,12 @@ display: flex;
 }
 
 .service-img{
-  width: 200px;
-  height: 200px;
+  width: auto;
+  height: auto;
 }
 
 .service-img img{
-  width: auto;
+  width: 110%;
   height: 150px;
 }
 
