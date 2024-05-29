@@ -12,6 +12,7 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300..700&display=swap');
   </style>
+  <script src="./App.js"></script>
 </head>
 
 <body>
@@ -238,8 +239,11 @@
     <div id="ContactoRef"></div>
     <section class="seccion_oscura" id="Contacto">
       <h2 id="titulo4">Contacto</h2>
-      <form action="#" id="form" method="GET" novalidate>
-        <div class="error" id="error-lastname"></div>
+      <form action="" id="form" method="GET">
+        <div class="form-control" id="nombre-control">
+            <label for="nombre"> Nombre </label>
+            <input type="text" required name="nombre" id="nombre">
+        </div>
         <div class="form-control">
           <div class="email">
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="22" height="22" viewBox="0 0 24 24" stroke-width="2" stroke="#76453b" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -297,6 +301,7 @@
             <label for="checkbox3">Otro</label>
           </div>
         </div>
+        <p class="warning" id="warning"></p>
         <button  type="submit">Enviar</button>
       </form>
     </section>
