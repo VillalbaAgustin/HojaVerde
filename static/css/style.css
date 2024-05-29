@@ -167,7 +167,7 @@ h1 {
   margin: 0px 40px 10px; 
 }
 
-.slider div {
+.slider ul {
   display: flex;
   padding: 0px;
   width: 400%;
