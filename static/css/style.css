@@ -173,7 +173,7 @@ h1 {
   justify-content: center;
 }
 
-.slider div {
+.slider ul {
   display: flex;
   padding: 0px;
   width: 400%;
@@ -480,6 +480,7 @@ span{
   display: flex;
   justify-content: center;
   flex-direction: column;
+  align-items: baseline;
 }
 
 .form-control{
@@ -524,3 +525,9 @@ span{
   border-radius: 7px;
 }
 
+.warning{
+  text-align: center;
+  width: 15rem;
+  padding: 0.5rem;
+  color: red;
+}
