@@ -4,8 +4,8 @@ const mysql = require("mysql2");
 const connection = mysql.createConnection({
     host: 'localhost',
     user:'root',
-    password: 'Posadas3213',
-    PORT: 3306
+    password: 'admin',
+    port: 3306
 });
 
 connection.connect((err)=>{
@@ -29,11 +29,13 @@ connection.connect((err)=>{
             console.log("Error al cambiar a la base de datos hoja_verde");
             return
             };
-/**CREACION TABLA PLANTAS (TU JARDIN)** */
+
+            /**CREACION TABLA PLANTAS (TU JARDIN)** */
             const createTablePlants = `
                 CREATE TABLE IF NOT EXISTS plants (
                     id INT AUTO_INCREMENT PRIMARY KEY,
                     nombre VARCHAR(255) NOT NULL,
+                    descripcion VARCHAR(255) NOT NULL,
                     dificultad VARCHAR(255) NOT NULL,
                     propagacion VARCHAR(255) NOT NULL
                 )`;
@@ -43,7 +45,6 @@ connection.connect((err)=>{
                     console.error("Error al crear la tabla plants: ", err);
                     return
                 };
-
                 console.log("Tabla plants: CREADA/EXISTENTE/GARANTIZADA");
             });
 /**CREACION TABLA SERVICIOS** */
@@ -51,6 +52,7 @@ connection.connect((err)=>{
                 CREATE TABLE IF NOT EXISTS services (
                     id INT AUTO_INCREMENT PRIMARY KEY,
                     nombre VARCHAR(255) NOT NULL,
+                    descripcion VARCHAR(255) NOT NULL,
                     inmediatez VARCHAR(255) NOT NULL,
                     costo INT NOT NULL
                 )`;

@@ -23,24 +23,30 @@ const getPlantById = (req, res)=>{
 
 //createPlant
 const createPlant = (req, res)=>{
-    const {nombre, dificultad, propagacion} = req.body;
-    const sql = `INSERT INTO plants (nombre, dificultad, propagacion) VALUES (?, ?, ?)`;
-    hoja_verde.query(sql, [nombre, dificultad, propagacion], (err, result)=>{
+    const {nombre, descripcion, dificultad, propagacion } = req.body;
+    const sql = `INSERT INTO plants (nombre, descripcion, dificultad, propagacion) VALUES (?, ?, ?, ?)`;
+    hoja_verde.query(sql, [nombre, descripcion, dificultad, propagacion], (err, result)=>{
         if(err){throw err}
-        res.json({mensaje: "Planta creada en el id: "+id})
+        res.json({mensaje: "Planta creada"})
     });
 };
 
-//updatePlant
 const updatePlant = (req, res)=>{
-    const {id} = req.params;
-    const {nombre, dificultad, propagacion} = req.body;
-    const sql = `UPDATE plants SET nombre = ?, dificultad = ?, propagacion = ? WHERE id = ?`;
-    hoja_verde.query = (sql, [nombre, dificultad, propagacion, id], (err, result)=>{
-        if(err){throw err}
-        res.json({mensaje: "Planta actualizada"})
-    });
-};
+  // desestructuracion de la consulta
+  const {id} = req.params;
+  const {nombre, descripcion, dificultad, propagacion} = req.body;
+
+  // creamos la consulta sql
+  const sql = 'UPDATE plants SET nombre = ?, descripcion = ?, dificultad = ?, propagacion = ? WHERE id = ?';
+
+  // enviamos consulta a la bbdd
+  hoja_verde.query(sql,[nombre, descripcion, dificultad, propagacion, id],(err, result)=>{
+      //si sucede algun error
+      if(err){throw err}
+      //si todo sale bien
+      res.json({mensaje:"Planta actualizada"})
+  });
+}
 
 //deletePlant
 const deletePlant = (req, res)=>{

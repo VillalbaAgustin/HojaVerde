@@ -23,24 +23,25 @@ const getServiceById = (req, res)=>{
 
 //createService
 const createService = (req, res)=>{
-    const {nombre, inmediatez, costo} = req.body;
-    const sql = `INSERT INTO services (nombre, inmediatez, costo) VALUES (?, ?, ?)`;
-    hoja_verde.query(sql, [nombre, inmediatez, costo], (err, result)=>{
+    const {nombre, descripcion, inmediatez, costo} = req.body;
+    const sql = `INSERT INTO services (nombre, descripcion, inmediatez, costo) VALUES (?, ?, ?,?)`;
+    hoja_verde.query(sql, [nombre, descripcion, inmediatez, costo], (err, result)=>{
         if(err){throw err}
-        res.json({mensaje: "Servicio creado en el id: "+id})
+        res.json({mensaje: "Servicio creado"})
     });
 };
 
 //updateService
 const updateService = (req, res)=>{
     const {id} = req.params;
-    const {nombre, inmediatez, costo} = req.body;
-    const sql = `UPDATE services SET nombre = ?, inmediatez = ?, costo = ? WHERE id = ?`;
-    hoja_verde.query = (sql, [nombre, inmediatez, costo, id], (err, result)=>{
+    const {nombre, descripcion, inmediatez, costo} = req.body;
+    const sql = `UPDATE services SET nombre = ?, descripcion = ?, inmediatez = ?, costo = ? WHERE id = ?`;
+    hoja_verde.query(sql, [nombre, descripcion, inmediatez, costo, id], (err, result)=>{
         if(err){throw err}
         res.json({mensaje: "Servicio actualizado"})
     });
 };
+
 
 //deleteService
 const deleteService = (req, res)=>{
