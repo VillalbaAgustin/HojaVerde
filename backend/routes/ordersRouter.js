@@ -11,13 +11,13 @@ const ordersController = require('../Controllers/ordersController');
 //Para consultar listado de plantas
 router.get('/', ordersController.getAllOrders);
 //Para consulta de plantas por id
-router.get('/:id', ordersController.getServiceById);
+router.get('/:id', ordersController.getOrderById);
 //Para crear una planta
-router.post('/', ordersController.createService);
+router.post('/', ordersController.createOrder);
 //Para actualizar una planta
-router.put('/:id', ordersController.updateService);
+router.put('/:id', ordersController.updateOrder);
 //Para borrar una planta
-router.delete('/:id', ordersController.deleteService);
+router.delete('/:id', ordersController.deleteOrder);
 
 // exportamos el módulo
 module.exports = router;

@@ -7,6 +7,7 @@ const app = express();
 // Importamos el módulo plantsRoutes
 const plantsRouter = require('../routes/plantsRouter.js');
 const servicesRouter = require("../routes/servicesRouter.js");
+const ordersRouter = require("../routes/ordersRouter.js");
 
 // Declaramos el puerto
 const PORT = 3000; 
@@ -17,6 +18,7 @@ app.use(express.json());
 // ruta ppal y sub-rutas
 app.use('/plants', plantsRouter);
 app.use('/services', servicesRouter);
+app.use('/orders', ordersRouter);
 
 // Iniciamos el servidor
 app.listen(PORT, () => {
